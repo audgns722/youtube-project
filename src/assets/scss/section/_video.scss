@@ -1,0 +1,179 @@
+.video__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    justify-content: space-between;
+
+    .video {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        border: 1px solid rgba(255, 166, 0, 0.5);
+        padding: 15px;
+        color: var(--black);
+        transition: all 0.1s;
+        border-radius: 5px;
+
+        .video__thumb {
+
+            a {
+                display: block;
+                cursor: pointer;
+                width: 100%;
+                padding-bottom: 56.25%;
+                background-size: cover;
+                background-position: center;
+                border: 1px solid rgba(255, 166, 0, 0.5)
+            }
+        }
+
+        .video__info {
+
+            .title {
+                @include line-one;
+                margin-top: 10px;
+                font-weight: bold;
+            }
+
+            .desc {
+                font-size: 15px;
+                margin-top: 10px;
+                @include line(3);
+            }
+
+            .info {
+                margin-top: 10px;
+                @include line(1);
+                display: flex;
+                justify-content: space-between;
+                font-size: 15px;
+            }
+        }
+
+        &:hover {
+            filter: grayscale(50%)opacity(90%);
+            background-color: #fff6e2;
+            color: var(--black);
+        }
+
+        .info {
+            display: flex;
+            justify-content: center;
+
+            .author {
+                width: 50%;
+                @include line-one;
+                font-size: 14px;
+                text-decoration: underline;
+                text-underline-position: under;
+            }
+        }
+    }
+}
+
+// 비디오 더보기 버튼
+.video__more {
+    button {
+        display: block;
+        border: 3px solid rgb(255 200 118);
+        border-radius: 30px;
+        margin: 0 auto;
+        width: 100px;
+        height: 40px;
+        cursor: pointer;
+        font-weight: 700;
+        transition: all 0.3s;
+
+        &:hover {
+            background-color: rgb(255, 186, 84);
+        }
+    }
+}
+
+// 비디오 상세 페이지
+.video__view {
+
+    .video__play {
+        width: 100%;
+        padding-bottom: 56.25%;
+        position: relative;
+    }
+}
+
+.video__info {
+    // background-color: #ffffff70;
+    margin-top: 5px;
+
+    .video__title {
+        padding-top: 10px;
+        font-size: 1.2rem;
+        font-weight: 600;
+
+    }
+
+    .video__channel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .id {
+            font-weight: 800;
+
+            a {
+                background-color: #ffffff02;
+                padding: 10px;
+                font-size: 1rem;
+                margin-top: 10px;
+                border: 1px solid rgba(255, 166, 0, 0.5);
+            }
+
+
+        }
+
+        .count {
+            display: flex;
+            align-items: center;
+
+            span {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                border-radius: 30px;
+                margin: 0 5px;
+                border: 1px solid rgba(255, 166, 0, 0.5);
+            }
+
+            svg {
+                margin-right: 5px;
+            }
+
+        }
+    }
+
+    .video__desc {
+        white-space: pre-line;
+        padding: 10px;
+        border: 1px solid rgba(255, 166, 0, 0.5);
+        margin-bottom: 15px;
+    }
+
+    .video__moreBtn {
+        background-color: #eaedde;
+        padding: 5px;
+    }
+
+    .video__comments {
+        border: 1px solid rgba(255, 166, 0, 0.5);
+
+        .comment {
+
+            p {
+                display: block;
+                padding: 5px 10px;
+                border-bottom: 1px dashed rgba(255, 166, 0, 0.5);
+                margin: 5px 0;
+            }
+        }
+    }
+}

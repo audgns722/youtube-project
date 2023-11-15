@@ -1,0 +1,16 @@
+.search__inner {
+    width: 100%;
+    padding: 17px 40px;
+
+    label {
+        display: none;
+    }
+
+    .search__input {
+        width: 100%;
+        background-color: #ffffff;
+        padding: 15px 30px;
+        color: var(--black);
+        font-weight: 700;
+    }
+}
