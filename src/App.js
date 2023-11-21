@@ -5,9 +5,11 @@ import Today from './pages/Today'
 import Youtubers from './pages/Youtubers'
 import Channel from './pages/Channel'
 import Search from './pages/Search'
+import Video from './pages/Video'
 import Header from './components/section/Header'
 import Main from './components/section/Main'
 import Footer from './components/section/Footer'
+
 
 
 
@@ -23,6 +25,7 @@ const App = () => {
           <Route path='/youtubers' element={<Youtubers />} />
           <Route path='/channel/:channelId' element={<Channel />} />
           <Route path='/search/:searchId' element={<Search />} />
+          <Route path='/video/:videoId' element={<Video />} />
         </Routes>
       </Main>
       <Footer />

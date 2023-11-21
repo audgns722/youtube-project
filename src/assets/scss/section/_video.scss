@@ -2,17 +2,18 @@
     display: grid;
     grid-template-columns: repeat(4, 24%);
     justify-content: space-between;
+    min-height: 100vh;
 
     .video {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         margin-bottom: 15px;
-        border: 1px solid rgba(255, 166, 0, 0.5);
+        border: 2px solid #b1b1b1;
+        background-color: #fff;
         padding: 15px;
         color: var(--black);
         transition: all 0.1s;
-        border-radius: 5px;
 
         .video__thumb {
 
@@ -23,7 +24,6 @@
                 padding-bottom: 56.25%;
                 background-size: cover;
                 background-position: center;
-                border: 1px solid rgba(255, 166, 0, 0.5)
             }
         }
 
@@ -33,6 +33,7 @@
                 @include line-one;
                 margin-top: 10px;
                 font-weight: bold;
+                font-size: 1rem;
             }
 
             .desc {
@@ -90,9 +91,8 @@
     }
 }
 
-// 비디오 상세 페이지
-.video__view {
 
+.video__View {
     .video__play {
         width: 100%;
         padding-bottom: 56.25%;
@@ -100,80 +100,87 @@
     }
 }
 
-.video__info {
-    // background-color: #ffffff70;
-    margin-top: 5px;
+#videoPage {
+    .video__View {
 
-    .video__title {
-        padding-top: 10px;
-        font-size: 1.2rem;
-        font-weight: 600;
+        .video__info {
+            padding: 15px;
+            background-color: #ffffff70;
+            margin-top: 5px;
 
-    }
+            .video__title {
+                padding-top: 10px;
+                font-size: 1.2rem;
+                font-weight: 600;
 
-    .video__channel {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-
-        .id {
-            font-weight: 800;
-
-            a {
-                background-color: #ffffff02;
-                padding: 10px;
-                font-size: 1rem;
-                margin-top: 10px;
-                border: 1px solid rgba(255, 166, 0, 0.5);
             }
 
-
-        }
-
-        .count {
-            display: flex;
-            align-items: center;
-
-            span {
+            .video__channel {
                 display: flex;
+                justify-content: space-between;
                 align-items: center;
-                padding: 10px;
-                border-radius: 30px;
-                margin: 0 5px;
+                margin-bottom: 20px;
+
+                .id {
+                    font-weight: 800;
+                    color: var(--black);
+                    font-weight: 600;
+                    line-height: 1;
+                    padding: 10px 15px;
+                    border-radius: 30px;
+                    display: inline-block;
+                    text-align: center;
+                    border: 5px solid rgba(255, 184, 77, 0.77);
+
+                    a {}
+                }
+
+                .count {
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.2rem;
+
+                    svg {
+                        margin-right: 5px;
+                    }
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 5px;
+                        padding: 0 10px;
+                    }
+                }
+            }
+
+            .video__desc {
+                white-space: pre-line;
+                padding: 20px 5px;
+                border-top: 1px solid #b1b1b1;
+                margin-bottom: 15px;
+                @include line(4);
+            }
+
+            .video__moreBtn {
+                background-color: #eaedde;
+                padding: 5px;
+            }
+
+            .video__comments {
                 border: 1px solid rgba(255, 166, 0, 0.5);
-            }
 
-            svg {
-                margin-right: 5px;
-            }
+                .comment {
 
-        }
-    }
-
-    .video__desc {
-        white-space: pre-line;
-        padding: 10px;
-        border: 1px solid rgba(255, 166, 0, 0.5);
-        margin-bottom: 15px;
-    }
-
-    .video__moreBtn {
-        background-color: #eaedde;
-        padding: 5px;
-    }
-
-    .video__comments {
-        border: 1px solid rgba(255, 166, 0, 0.5);
-
-        .comment {
-
-            p {
-                display: block;
-                padding: 5px 10px;
-                border-bottom: 1px dashed rgba(255, 166, 0, 0.5);
-                margin: 5px 0;
+                    p {
+                        display: block;
+                        padding: 5px 10px;
+                        border-bottom: 1px dashed rgba(255, 166, 0, 0.5);
+                        margin: 5px 0;
+                    }
+                }
             }
         }
     }
+
 }

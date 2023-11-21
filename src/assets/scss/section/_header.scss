@@ -4,7 +4,7 @@
         display: flex;
         padding: 10px;
         margin: 10px;
-        border-bottom: 1px dashed #000;
+        border-bottom: 1px solid #b1b1b1;
 
         em {
             width: 50px;
@@ -133,13 +133,13 @@
     }
 
     .keyword {
-        border-top: 1px dashed #000;
-        border-bottom: 1px dashed #000;
+        border-top: 1px solid #b1b1b1;
+        border-bottom: 1px solid #b1b1b1;
         padding: 5px 0;
+        padding: 5px;
 
         li {
             display: inline-block;
-
             margin: 5px;
 
 
@@ -150,14 +150,15 @@
                 font-weight: 700;
                 color: var(--black);
                 padding: 5px 10px;
-                border: 2px dashed #ffd06c;
+                border: 1px solid #e09900;
+
                 border-radius: 5px;
                 position: relative;
                 text-align: center;
                 transition: all 0.3s;
 
                 &:hover {
-                    background-color: #ffe8b7;
+                    background-color: #ffcb5c;
                 }
             }
 
@@ -171,7 +172,7 @@
 
             &.active {
                 a {
-                    background-color: #ffe8b7;
+                    background-color: #ffcb5c;
                 }
             }
         }
@@ -179,9 +180,8 @@
 }
 
 .header__sns {
-    border-top: 1px dashed #000;
+    border-top: 1px solid #b1b1b1;
     position: absolute;
-    margin: 0 10px;
     bottom: 0;
     left: 0;
     right: 0;

@@ -27,33 +27,25 @@
 
 - `npm install react-router-dom axios react-icons react-player sass react-helmet-async swiper`
 - react-router-dom, axios, react-icons, react-player, sass, react-helmet-async ,swiper
-- react-helmet-async : React 애플리케이션에서 HTML의 head 섹션을 동적으로 관리할 수 있게 해주는 라이브러리입니다.
-- swiper : 모바일 앱 및 웹 앱에서 터치 슬라이드를 구현하는 데 사용되는 JavaScript 라이브러리입니다.
+- react-helmet-async : React 애플리케이션에서 HTML의 head 섹션을 동적으로 관리할 수 있게 해주는 라이브러리
+- swiper : 모바일 앱 및 웹 앱에서 터치 슬라이드를 구현하는 데 사용되는 JavaScript 라이브러리
 
 
 ## 제작순서
 
-- Home, Today, Youtubers페이지 작업[data.js 작업], playicon, channel페이지
-
+- Home, Today, Youtubers페이지 작업[data.js 작업], playicon, channel페이지 ,컴포넌트 프롭스 videosearch 세분화 ,Swiper , api.js 파일 생성, 더보기 기능 추가 (nextPageToken) 값을 가져옴
+- 영상 api 불러옴, channel페이지 트라이 사용 async await, 프롭스
 - [Swiper](https://swiperjs.com/) 설정 : Navigation, Autoplay 적용
-
-- ```react
-  import { Swiper, SwiperSlide } from 'swiper/react';
-  import 'swiper/css';
-  import 'swiper/css/navigation';
-  import { Navigation, Autoplay } from 'swiper/modules';`   
-  <Swiper><SwiperSlide></SwiperSlide></Swiper>
-  ```
-- .env 파일 생성 : 유튜브 API키 등록 `REACT_APP_YOUTUBE_API_KEY=.....`(.gitignore에도 추가)
+- .env: 프로젝트의 최상위 루트에 위치하며, 민감한 정보 및 환경 변수를 저장해 보안을 강화하고 유지보수를 용이하게 함
 - fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=뉴진스&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)APIkey 
 - useParams :  React Router의 훅 중 하나로, 동적인 라우팅을 사용할 때 URL에서 전달된 매개변수를 추출하는 데 사용
 - Postman : API 개발 및 테스트를 위한 협업 도구로, 웹 API를 테스트하고 디버깅하는 데 사용
-- useEffect : React에서 부수 효과를 다루는 Hook으로, 주로 데이터 페칭과 같은 비동기 작업에 사용
-- fetch : 
+- useEffect : React에서 부수 효과를 다루는 Hook으로, 주로 데이터 페칭과 같은 비동기 작업에 사용   
+  - fetch : useEffect와 fetch 함수를 조합하여 React 컴포넌트에서 API 호출 및 비동기 작업을 수행. 이는 컴포넌트가 렌더링된 후에 데이터를 가져오거나 업데이트하는 데 사용. 주로 async/await 구문을 사용
 - useState : React에서 상태를 다루는 Hook으로, 함수 컴포넌트 내에서 로컬 상태를 사용. 초기 상태를 인자로 받아 해당 상태를 반환
-- api.js 파일 생성
-- 컴포넌트 프롭스 videosearch 세분화
-- 더보기 기능 추가 (nextPageToken) 값을 가져옴
+- try, catch : JavaScript에서 예외(에러)를 처리하는 메커니즘. 이 구문은 예외가 발생할 수 있는 코드를 시도하고, 예외가 발생하면 캐치하여 특별한 처리를 가능
+- async, await : 
+
 
      
   
@@ -61,9 +53,8 @@
 ## 트러블 슈팅
 
 <details>
-<summary>Whitespace 에러</summary>
+<summary>API호출 404 에러</summary>
 
-
-## 에러() :
+- #### 404에러(해결) : api.js를 통해 호출시 base_url 끝 경로에 /가 붙어 api url를 호출하지 못함
 
 </details>
