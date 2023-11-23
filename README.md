@@ -19,8 +19,8 @@
 
 미리보기 :   
 <div align=center>
-<img width=60% src="https://audgns722.github.io/youtube-project/src/assets/img/react-youtubetumb.jpg">
-<img width=30% src="https://audgns722.github.io/youtube-project/src/assets/img/cover.png">   
+<img width=90% src="https://audgns722.github.io/youtube-project/src/assets/img/react-youtubetumb.jpg">
+<img width=10% src="https://audgns722.github.io/youtube-project/src/assets/img/cover.png">   
 </div>
 
 ## 사용 스택
