@@ -18,8 +18,10 @@
 ## 완성작 보기
 
 미리보기 :   
+<div aline=center>
 <img src="https://audgns722.github.io/youtube-project/src/assets/img/react-youtubetumb.jpg">   
 <img width=370px src="https://audgns722.github.io/youtube-project/src/assets/img/cover.png">   
+</div>
 
 ## 사용 스택
 
