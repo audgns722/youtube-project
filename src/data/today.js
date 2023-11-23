@@ -1,30 +1,30 @@
 export const todayText = [
     {
-        img: "",
+        img: "https://i.ytimg.com/vi/8_GO15t8uKM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCVoqhEvQe4ogVvB5R6TMN95tkPog",
         title: "인간극장 레전드 #313-1 :억척 어매와 까칠한 효자",
         desc: "1화 KBS 인간극장 2019년 1월 21일 ~ 2019년 1월 25일 방송 지리산 둘레길에서 민박집을 하는 순춘 할머니와 아들 규이 씨. 칠순의 어머니를 모시려고 직장도 그만두고 귀향한 규이 씨는 몸을 돌보지 않고 일만 하는 어머니가 걱정스럽다. 그러다 보니 자꾸만 어머니에게 까칠한 말만 하게 되고... 두 사람 사이의 다툼은 끊이지 않는다.",
         author: "KBS뭉클티비",
         date: "2023. 04. 08",
-        videoId: "",
-        channelId: ""
+        videoId: "8_GO15t8uKM",
+        channelId: "UC6wiUwl7dPhZOAM92lGgKPg"
     },
     {
-        img: "",
+        img: "https://i.ytimg.com/vi/VqE__FsoI2M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA9NTgV4Ai4KC_hj_lgPR0hM5dS0w",
         title: "감당할 수 없는 엄청난 물고기 떼를 보고 심상치 않은 상황 직감한 어부의 반응 : 인도네시아 인간과 바다",
         desc: "※ 이 영상은 2023년 11월 6일에 방송된 ＜인간과 바다 - 바다 위의 위대한 유산, 인도네시아 응언쪼르＞의 일부입니다. 인도네시아는 1만 7천 개 넘는 섬들로 구성된 세계 최대 도서 국가다. 그 많은 섬 중 하나로, 수도인 자카르타를 담고 있는 자바섬! 왼쪽으론 수마트라섬이, 오른쪽으론 발리섬이 위치하며 자바섬은 이들 사이에서 당당한 자태를 뽐내고 있다. 세계에서 13번째로 큰 이 섬의 동쪽엔 자바섬의 대표적인 황금 어장인 문차르가 자리 잡고 있다.",
         author: "EBS다큐",
         date: "2023. 11. 11",
         videoId: "",
-        channelId: ""
+        channelId: "UCFCtZJTuJhE18k8IXwmXTYQ"
     },
     {
-        img: "",
+        img: "https://i.ytimg.com/vi/c-5djxuy0IE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCNZznJ4yPqusWI01L401bRnWlcFA",
         title: "어느날 갑자기 세워져 있는 거대한 타워 크레인, 어떻게 생기는걸까?",
         desc: "전국 어디서나 고층 건물을 쉽게 볼 수 있는 현대 사회. '높이 더 높이' 건물을 올리기 위해 없어서는 안 될 구조물이 있다. 바로 타워 크레인! 타워크레인을 설치하기 위한 필수 인물, 타워크레인 설치반. 그들은 마치 지상을 걷듯 수십 미터 상공에서 좁은 폭의 철재 구조물을 횡단하는데, 보는 사람을 더 아찔하게 만든다.",
         author: "EBS다큐",
         date: "2023. 10. 19",
         videoId: "",
-        channelId: ""
+        channelId: "UCFCtZJTuJhE18k8IXwmXTYQ"
     },
     {
         img: "",

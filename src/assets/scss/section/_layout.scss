@@ -5,7 +5,7 @@
     width: 260px;
     height: 100%;
     z-index: 1000;
-    background-color: #ffffff;
+    background-color: var(--white);
 
 }
 
@@ -44,6 +44,11 @@
 @media (max-width: 800px) {
     #header {
         left: -260px;
+        transition: all 0.4s ease-in-out;
+
+        &.show {
+            left: 0;
+        }
     }
 
     #main {

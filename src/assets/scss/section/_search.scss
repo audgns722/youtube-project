@@ -9,10 +9,23 @@
     .search__input {
         width: 100%;
         background-color: #ffffff;
+        font-size: 1rem;
         padding: 15px 30px;
         color: var(--black);
         font-weight: 700;
         border-bottom: 3px inset rgba(255, 166, 0, 0.5);
         ;
+    }
+}
+
+@media (max-width:800px) {
+    .search__inner {
+        padding: 21px 20px 17px 90px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    #header.show+#main .search__inner {
+        padding: 21px 20px 17px 275px;
+        transition: all 0.4s ease-in-out;
     }
 }

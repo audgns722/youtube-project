@@ -1,14 +1,28 @@
-.swiper-button-prev,
-.swiper-button-next {
-    background-color: #00000060;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    top: var(--swiper-navigation-top-offset, 40%);
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: #000;
 }
 
-.swiper-button-prev::after,
-.swiper-button-next::after {
-    color: var(--white);
-    font-size: 20px;
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: #00000065;
+    width: 40px;
+    height: 40px;
+    margin-top: -55px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.swiper-button-prev {
+    left: 0 !important;
+}
+
+.swiper-button-next {
+    right: 0 !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    color: #fff;
+    font-size: 16px !important;
 }

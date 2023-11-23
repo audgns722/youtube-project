@@ -17,7 +17,7 @@
 
 ## 완성작 보기
 
-미리보기 : 
+미리보기 : <img src="https://"
 
 ## 사용 스택
 
@@ -34,10 +34,9 @@
 ## 제작순서
 
 - Home, Today, Youtubers페이지 작업[data.js 작업], playicon, channel페이지 ,컴포넌트 프롭스 videosearch 세분화 ,Swiper , api.js 파일 생성, 더보기 기능 추가 (nextPageToken) 값을 가져옴
-- 영상 api 불러옴, channel페이지 트라이 사용 async await, 프롭스
+- 영상 api 불러옴, channel페이지 트라이 사용 async await, 프롭스, 핼멧, 채널페이지 더보기 , search페이지(검색기능추가), home 추천영상 추가, 로딩소스 추가
 - [Swiper](https://swiperjs.com/) 설정 : Navigation, Autoplay 적용
-- .env: 프로젝트의 최상위 루트에 위치하며, 민감한 정보 및 환경 변수를 저장해 보안을 강화하고 유지보수를 용이하게 함
-- fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=뉴진스&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)APIkey 
+- .env: 프로젝트의 최상위 루트에 위치하며, 민감한 정보 및 환경 변수를 저장해 보안을 강화하고 유지보수를 용이
 - useParams :  React Router의 훅 중 하나로, 동적인 라우팅을 사용할 때 URL에서 전달된 매개변수를 추출하는 데 사용
 - Postman : API 개발 및 테스트를 위한 협업 도구로, 웹 API를 테스트하고 디버깅하는 데 사용
 - useEffect : React에서 부수 효과를 다루는 Hook으로, 주로 데이터 페칭과 같은 비동기 작업에 사용   
@@ -45,8 +44,20 @@
 - useState : React에서 상태를 다루는 Hook으로, 함수 컴포넌트 내에서 로컬 상태를 사용. 초기 상태를 인자로 받아 해당 상태를 반환
 - try, catch : JavaScript에서 예외(에러)를 처리하는 메커니즘. 이 구문은 예외가 발생할 수 있는 코드를 시도하고, 예외가 발생하면 캐치하여 특별한 처리를 가능
 - async, await : 
-
-
+- Suspense : Suspense 컴포넌트는 비동기적으로 로드된 컴포넌트를 기다리는 동안 로딩 상태를 처리하는 데 사용
+- lazy : 동적으로 컴포넌트를 로딩하기 위해 사용.코드 분할(Code Splitting)을 통해 번들을 나누고, 필요한 경우에만 컴포넌트를 로드
+- react-helmet-async
+  - HelmetProvider : 메인페이지 적용 - scrollto.js 적용
+  - SEO (Search Engine Optimization) 개선: react-helmet-async를 사용하여 페이지의 title 및 meta 태그를 설정함으로써 검색 엔진 최적화를 개선할 수 있습니다. 
+  - 유지보수의 용이성 : 모든 페이지에서 일관된 변경이 적용되므로 유지보수가 용이
+  - 재사용성 : Main 컴포넌트를 따로 분리함으로써, 동일한 레이아웃 구조를 여러 페이지에서 재사용
+  - 코드 구조의 개선 : 각 페이지에서 공통으로 사용되는 레이아웃을 별도의 컴포넌트로 분리하면 코드가 더 간결해짐
+  - 프로젝트 구조의 일관성 : 재사용 가능한 작은 부분으로 나누면 프로젝트 구조가 일관성 있게 유지
+  - 효율적인 개발 : 개발 및 디버깅이 더 효율적
+- try-catch-finally : 예외가 발생하든 안하든 항상 실행
+- useNavigate : saerch페이지 검색기능 추가(엔터키를 눌렀을때에)
+  - 불필요한 데이터 요청을 방지하고 사용자에게 빠른 피드백을 제공
+  - 페이지 URL 업데이트, 히스토리 관리, 간단한 구현 등
      
   
 
@@ -58,3 +69,7 @@
 - #### 404에러(해결) : api.js를 통해 호출시 base_url 끝 경로에 /가 붙어 api url를 호출하지 못함
 
 </details>
+
+TypeError: Cannot read property 'map' of undefined 에러 
+`const [channelVideo, setChannelVideo] = useState([]);` 값을 빈배열로 지정하지 않아 생김 해결
+

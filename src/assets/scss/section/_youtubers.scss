@@ -12,6 +12,7 @@
         }
 
         .youtubers__info {
+            width: 100%;
             padding-top: 5px;
             text-align: center;
             @include line(2);
@@ -71,6 +72,14 @@
         .youtubers__inner {
             .youtubers {
                 width: 31%;
+            }
+        }
+    }
+
+    @media (max-width : 400px) {
+        .youtubers__inner {
+            .youtubers {
+                width: 48%;
             }
         }
     }

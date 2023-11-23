@@ -11,7 +11,7 @@ import { Navigation, Autoplay } from 'swiper/modules';
 const Youtubers = () => {
     return (
         <section>
-            <h2> 😍다큐 유튜버 모음</h2>
+            <h2>😍 다큐 유튜버 모음</h2>
             <div className="youtubers__inner">
                 <Swiper
                     slidesPerView={10}

@@ -216,3 +216,24 @@
         }
     }
 }
+
+@media (max-width:800px) {
+    .header__logo a em {
+        position: fixed;
+        left: 20px;
+        top: 20px;
+        animation: fadeOutAnimation 0.3s ease-in-out;
+    }
+
+    #header.show {
+        display: block;
+        transition: all 0.3s ease-in;
+
+        .header__logo a em {
+            position: relative;
+            left: 0;
+            top: 0;
+            animation: fadeInAnimation 1s ease-in-out;
+        }
+    }
+}
