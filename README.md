@@ -19,7 +19,7 @@
 
 미리보기 :   
 <img src="https://audgns722.github.io/youtube-project/src/assets/img/react-youtubetumb.jpg">
-<img witdh=50% src="https://audgns722.github.io/youtube-project/src/assets/img/cover.png">
+<img witdh=30% src="https://audgns722.github.io/youtube-project/src/assets/img/cover.png">
 
 ## 사용 스택
 
