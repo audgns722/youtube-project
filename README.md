@@ -18,8 +18,8 @@
 ## 완성작 보기
 
 미리보기 :   
-<img src="https://audgns722.github.io/youtube-project/src/assets/img/react-youtubetumb.jpg">
-<img witdh="370px" src="https://audgns722.github.io/youtube-project/src/assets/img/cover.png">
+<img src="https://audgns722.github.io/youtube-project/src/assets/img/react-youtubetumb.jpg">   
+<img width=370px src="https://audgns722.github.io/youtube-project/src/assets/img/cover.png">   
 
 ## 사용 스택
 
