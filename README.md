@@ -17,7 +17,7 @@
 
 ## 완성작 보기
 
-미리보기 : <img src="https://"
+미리보기 : <img width=80% src="https://audgns722.github.io/youtube-project/src/assets/img/react-youtubetumb.jpg">
 
 ## 사용 스택
 
