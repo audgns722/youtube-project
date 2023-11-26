@@ -107,10 +107,12 @@
 // 채널 더보기 버튼
 .channel__more button {
     display: block;
-    border: 3px solid rgb(255, 200, 118);
+    border: 1px solid rgb(255, 200, 118);
     border-radius: 30px;
     margin: 0 auto;
-    width: 100px;
+    margin-top: 10px;
+    background-color: #fff;
+    width: 90%;
     height: 40px;
     cursor: pointer;
     font-weight: 700;

@@ -21,7 +21,11 @@ const Today = () => {
                     <h3 className='title'>{todayText[0].title}</h3>
                     <p className='desc'>{todayText[0].desc}</p>
                     <div className='info'>
-                        <span className='author'>{todayText[0].author}</span>
+                        <Link
+                            to={`/channel/${todayText[0].channelId}`}
+                        >
+                            <span className='author'>{todayText[0].author}</span>
+                        </Link>
                         <span className='data'>{todayText[0].date}</span>
                     </div>
                 </div>

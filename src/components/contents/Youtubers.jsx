@@ -10,7 +10,7 @@ import { Navigation, Autoplay } from 'swiper/modules';
 
 const Youtubers = () => {
     return (
-        <section>
+        <section id='yotubers__main'>
             <h2>😍 다큐 유튜버 모음</h2>
             <div className="youtubers__inner">
                 <Swiper
