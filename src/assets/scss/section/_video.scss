@@ -101,10 +101,12 @@
 }
 
 #videoPage {
+    padding: 20px 20px;
+
     .video__View {
 
         .video__info {
-            padding: 15px;
+            padding: 5px 0;
             background-color: #ffffff70;
             margin-top: 5px;
 
@@ -127,10 +129,10 @@
                     font-weight: 600;
                     line-height: 1;
                     padding: 10px 15px;
-                    border-radius: 30px;
+                    border-radius: 10px;
                     display: inline-block;
                     text-align: center;
-                    border: 5px solid rgba(255, 184, 77, 0.77);
+                    border: 3px solid rgba(255, 184, 77, 0.77);
 
                     a {}
                 }
@@ -138,7 +140,10 @@
                 .count {
                     display: flex;
                     align-items: center;
-                    font-size: 1.2rem;
+                    font-size: 1rem;
+                    font-family: var(--mainfont-nanum);
+                    color: var(--black100);
+
 
                     svg {
                         margin-right: 5px;
@@ -147,10 +152,21 @@
                     span {
                         display: flex;
                         align-items: center;
-                        justify-content: center;
-                        margin: 0 5px;
+                        margin-left: 5px;
                         padding: 0 10px;
+                        border: 1px solid #b1b1b1;
                     }
+                }
+
+                @media (max-width:600px) {
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 10px;
+
+                    .id {
+                        margin-bottom: 5px;
+                    }
+
                 }
             }
 
@@ -158,25 +174,39 @@
                 white-space: pre-line;
                 padding: 20px 5px;
                 border-top: 1px solid #b1b1b1;
+                border-bottom: 1px solid #b1b1b1;
                 margin-bottom: 15px;
-                @include line(4);
             }
 
             .video__moreBtn {
-                background-color: #eaedde;
+                width: 80px;
+                cursor: pointer;
+                font-size: 0.8rem;
+                background-color: #ffcb5c;
+                border-radius: 5px;
                 padding: 5px;
+                margin-bottom: 10px;
             }
 
             .video__comments {
-                border: 1px solid rgba(255, 166, 0, 0.5);
 
                 .comment {
 
                     p {
+                        margin: 10px 0;
+                        margin-left: 10%;
+                        display: inline-block;
+                        border-bottom: 1px solid #b1b1b1;
+                        padding: 10px;
+                        background-color: #ffe6b0;
+                        border-radius: 0 15px 15px 15px;
+                        font-weight: 500;
+                    }
+
+                    .name {
+                        font-size: 1.1rem;
                         display: block;
-                        padding: 5px 10px;
-                        border-bottom: 1px dashed rgba(255, 166, 0, 0.5);
-                        margin: 5px 0;
+                        font-weight: 600;
                     }
                 }
             }
@@ -201,7 +231,6 @@
         }
 
         .video__info {
-            border: 1px solid rgba(255, 166, 0, 0.5);
             background-color: #fff;
             padding: 5px 14px;
 
@@ -234,5 +263,41 @@
             }
         }
 
+    }
+}
+
+@media (max-width:1100px) {
+    #searchPage {
+        padding: 10px 20px;
+        margin: 0 20px;
+
+        .video__inner {
+            grid-template-columns: repeat(3, 33%);
+
+            .title {
+                margin-top: 5px;
+            }
+
+            .info {
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+@media (max-width:900px) {
+    #searchPage {
+        .video__inner {
+            grid-template-columns: repeat(2, 48%);
+        }
+    }
+}
+
+@media (max-width:640px) {
+    #searchPage {
+        .video__inner {
+            grid-template-columns: repeat(1, 100%);
+            justify-content: center;
+        }
     }
 }

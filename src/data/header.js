@@ -39,8 +39,20 @@ export const keywordText = [
         title: "KBS 생로병사의 비밀",
         src: "/search/KBS생로병사의비밀"
     }, {
-        title: "KBS여행 걸어서 세계속으로",
-        src: "/search/KBS걸어서세계속으로"
+        title: "세계테마기행",
+        src: "/search/세계테마기행"
+    }, {
+        title: "K-DOC",
+        src: "/search/K-DOC"
+    }, {
+        title: "내셔널지오그래픽",
+        src: "/search/National Geographic Korea"
+    }, {
+        title: "디스커버리 픽",
+        src: "/search/디스커버리 픽 - Discovery Pic"
+    }, {
+        title: "tvN D ENT",
+        src: "/search/tvN D ENT"
     }
 ]
 

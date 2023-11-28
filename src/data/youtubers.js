@@ -37,7 +37,7 @@ export const youtubersText = [
     },
     {
         img: "https://yt3.googleusercontent.com/ytc/APkrFKa9LvZqJTCvgiERGOyMAI-H7Yokhgd5VjgGnkHN=s176-c-k-c0x00ffffff-no-rj",
-        author: "세테깅 세계테마기행",
+        author: "세계테마기행",
         channelId: "UCbeZPOz8uaHstEIbkqBOnGg",
         channelAddress: "https://www.youtube.com/@ebstheme",
     },

@@ -1,6 +1,7 @@
 body {
     background-color: #f9f9f9;
     color: var(--black);
+    font-family: var(--mainfont-nexon);
 }
 
 // 각 섹션 공통 요소
@@ -13,7 +14,7 @@ section {
     margin-top: 25px;
 
     @media (max-width: 800px) {
-        padding: 10px 10px;
+        padding: 5px 10px !important;
         margin: 10px 5px !important;
     }
 
