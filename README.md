@@ -14,10 +14,8 @@
 미리보기 :
 
 <div align=center>
-<img width=80% src="https://audgns722.github.io/youtube-react2023
-/src/assets/img/react-youtubetumb.jpg">
-<img width=19% src="https://audgns722.github.io/youtube-react2023
-/src/assets/img/cover.png">   
+<img width=80% src="https://audgns722.github.io/youtube-react2023/src/assets/img/react-youtubetumb.jpg">
+<img width=19% src="https://audgns722.github.io/youtube-react2023/src/assets/img/cover.png">   
 </div>
 
 ## 프로젝트 구성
