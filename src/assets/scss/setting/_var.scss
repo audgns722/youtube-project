@@ -1,0 +1,45 @@
+:root {
+    --mainfont-bookk: "bookkGothic";
+    --mainfont-nexon: "nexonLv2";
+    --mainfont-nanum: "nanumSquareNeo";
+    --mainfont-gmaket: "gmarket";
+    --subfont-oswald: "Oswald";
+
+    --mycolorgreen: #145c00;
+    --mycoloryellow: #ffee00;
+    --mycolorgray: #181818;
+    --mycolorgray2: #181818d0;
+    --acitvehover: rgb(253 253 253 / 11%);
+
+    --black: #000;
+    --black100: #1d1d1d;
+    --black200: #4d4d4d;
+    --black300: #7d7d7d;
+    --black400: #9d9d9d;
+    --black500: #e6e6e6;
+
+    --white: #fff;
+    --white100: #dbdbdb;
+    --white200: #c4c4c4;
+    --white300: #bbbbbb;
+    --white400: #aaaaaa;
+    --white500: #a7a7a7;
+
+    // 폰트 셋팅
+    font-family: var(--mainfont-bookk), var(--mainfont-nexon), var(--subfont-oswald);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    // 폰트 최적화
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    @media (max-width: 800px) {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}

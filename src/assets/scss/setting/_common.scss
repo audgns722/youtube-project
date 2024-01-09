@@ -1,0 +1,95 @@
+body {
+    background-color: #f9f9f9;
+    color: var(--black);
+    font-family: var(--mainfont-nexon);
+}
+
+// 각 섹션 공통 요소
+section {
+    border-radius: 30px;
+    background-color: #fff;
+    margin: 0 40px;
+    padding: 10px 40px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    margin-top: 25px;
+
+    @media (max-width: 800px) {
+        padding: 5px 10px !important;
+        margin: 10px 5px !important;
+    }
+
+    h2 {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 500;
+        margin: 10px;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+    }
+
+
+}
+
+h2 {
+    margin-bottom: 5px;
+}
+
+// 비디오 마우스 아이콘 효과
+.play__icon {
+    a {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        width: 100%;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: #00000015;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: background-color 0.3s;
+
+        }
+
+        &:hover::before {
+            background-color: #00000000;
+        }
+
+        &::after {
+            content: '';
+            width: 80px;
+            height: 80px;
+            background: #000000be url(../../img/icon/play.svg) no-repeat center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        &:hover::after {
+            opacity: 1;
+        }
+    }
+}
+
+// 로딩 소스
+.isLoading {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.isLoaded {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}

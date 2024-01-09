@@ -1,0 +1,117 @@
+// #today {
+//     border-radius: 30px;
+//     background-color: #fff;
+//     margin: 0 40px;
+//     padding: 10px 40px;
+//     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+// }
+
+.today__inner {
+    display: flex;
+    min-height: 250px;
+    margin-bottom: 40px;
+
+    .today__thumb {
+        width: 40%;
+        display: flex;
+        align-items: center;
+
+        a {
+            display: block;
+            cursor: pointer;
+            min-height: 250px;
+            width: 100%;
+            padding-bottom: 56.25%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+    }
+
+    .today__text {
+        width: 60%;
+        padding: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--white);
+
+
+        .today {
+            width: 150px;
+            font-size: 1.2rem;
+            color: var(--black);
+            font-weight: 600;
+            line-height: 1;
+            padding: 10px 15px;
+            border-radius: 30px;
+            display: block;
+            text-align: center;
+            box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+            background: linear-gradient(137deg, rgb(253, 187, 45) 0%, rgb(255 252 207) 35%, rgb(253, 187, 45) 100%);
+        }
+
+        .title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            width: 100%;
+            @include line-one;
+            margin-bottom: 10px;
+            margin-top: 15px;
+        }
+
+        .desc {
+            font-size: 1rem;
+            color: var(--black200);
+            @include line(3);
+        }
+
+        .info {
+            height: 30%;
+            display: flex;
+            align-items: flex-end;
+
+            .author {
+                cursor: pointer;
+                padding: 5px 15px;
+                box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+                margin-right: 15px;
+                font-weight: 600;
+            }
+
+            .date {
+                margin-left: 10px;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+@media(max-width:800px) {
+    .today__inner {
+        display: block;
+        min-height: 0;
+        margin-bottom: 20px;
+
+        .today__thumb {
+            width: 100%;
+
+            a {
+                min-height: 0;
+            }
+        }
+
+        .today__text {
+            width: 100%;
+            min-height: 220px;
+            margin-top: 10px;
+
+            .info {
+                justify-content: space-between;
+            }
+        }
+    }
+
+
+}
