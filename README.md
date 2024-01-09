@@ -132,7 +132,8 @@ npm install swiper
 
 ## 코드 미리보기
 
-😆 비동기 데이터 처리 (useEffect 사용)
+<details>
+<summary>😆 비동기 데이터 처리 (useEffect 사용)</summary>
 
 ```javascript
 useEffect(() => {
@@ -147,12 +148,21 @@ useEffect(() => {
   );
 }, [videoId]);
 ```
+</details>
 
-😆 조건부 UI 렌더링
+<details>
+<summary>😆 조건부 UI 렌더링</summary>
 
 ```javascript
 const searchPageClass = loading ? "isLoading" : "isLoaded";
+```
+loading 상태 변수를 사용하여 페이지의 로딩 상태에 따라 클래스 이름을 동적으로 변경합니다. loading이 true인 경우, searchPageClass는 "isLoading" 값을 가지며, false인 경우 "isLoaded" 값을 가집니다. 
+</details>
 
+<details>
+<summary>😆 더 보기 기능 구현</summary>
+
+```javascript
 const handleLoadMore = () => {
   if (nextPageToken) {
     setLoading(true);
@@ -160,14 +170,103 @@ const handleLoadMore = () => {
   }
 };
 ```
+handleLoadMore 함수는 사용자가 더 많은 컨텐츠를 요청할 때 호출됩니다. 이 함수는 nextPageToken이 존재할 경우, 즉 더 로드할 데이터가 있을 때, 추가 데이터를 불러오는 로직을 수행합니다. setLoading(true)는 데이터 로딩 과정이 시작됨을 나타냅니다. 
+</details>
+
+<details>
+<summary>😆 조건부 클래스 (layout) 사용</summary>
+
+```javascript
+const VideoSearch = ({ videos, layout = '' }) => {
+    // ...
+}
+
+{videos.map((video, key) => (
+    <div className={`video ${layout}`} key={key}>    
+    </div>
+))}
+```
+layout prop의 값에 따라 각 비디오 요소에 다른 클래스가 추가됩니다. 예를 들어, layout이 'grid'로 설정되면, 클래스 이름은 'video grid'가 됩니다. 이를 통해 동일한 VideoSearch 컴포넌트를 다른 스타일로 재사용할 수 있습니다.
+</details>
+
+<details>
+<summary>😆 Swiper 라이브러리 사용</summary>
+
+```javascript
+<Swiper
+    slidesPerView={1}
+    spaceBetween={20}
+    navigation={true}
+    modules={[Navigation]}
+    className={`mySwiper-${name}`}
+    breakpoints={{
+        // 반응형 설정: 뷰포트 크기에 따른 슬라이드 개수 및 간격 설정
+        640: { slidesPerView: 2, spaceBetween: 20 },
+        768: { slidesPerView: 3, spaceBetween: 20 },
+        1024: { slidesPerView: 4, spaceBetween: 20 },
+        1600: { slidesPerView: 5, spaceBetween: 20 }
+    }}
+>
+    {/* 비디오 슬라이드 아이템들 */}
+</Swiper>
+```
+</details>
+
+<details>
+<summary>😆 비디오 슬라이드 렌더링</summary>
+
+```javascript
+{videos.map((video, key) => (
+    <SwiperSlide key={key}>
+        <div className="video">
+            <div className="video__thumb play__icon">
+                <Link to={`/video/${video.id.videoId}`} style={{ backgroundImage: `url(${video.snippet.thumbnails.high.url})` }}></Link>
+            </div>
+            <div className="video__info">
+                <h3 className='title'><Link to={`/video/${video.id.videoId}`}>{video.snippet.title}</Link></h3>
+                <div className='info'>
+                    <Link to={`/channel/${video.snippet.channelId}`} className='author'>{video.snippet.channelTitle}</Link>
+                </div>
+            </div>
+        </div>
+    </SwiperSlide>
+))}
+```
+videos 배열을 순회하며 각 비디오에 대한 슬라이드를 생성합니다.
+</details>
 
 ## 트러블 슈팅
 
 <details>
-    <summary>API 호출 404 에러</summary>
-    <p>api.js를 통한 API 호출 시 발생한 404 에러를 해결. 문제의 원인은 base_url 끝 경로에 '/'가 추가되어 API URL 호출이 실패한 것이었습니다.</p>
+<summary>API 호출시 404 에러</summary>
+
+```javascript
+// 문제코드
+export const BASE_URL = 'https://youtube-v31.p.rapidapi.com/';
+
+export const fetchFromAPI = async (url) => {
+    const { data } = await axios.get(`${BASE_URL}/${url}`, options);
+    return data;
+};
+
+// 개선코드
+export const BASE_URL = 'https://youtube-v31.p.rapidapi.com';
+```
+문제의 원인은 base_url 끝 경로에 '/'가 추가되어 API URL 호출이 실패한 것이었습니다.
 </details>
+
+<br />
 <details>
-    <summary>TypeError: Cannot read property 'map' of undefined</summary>
-    <p>`useState`를 사용하여 `channelVideo` 상태를 관리하는 동안 발생한 에러를, 초기 상태 값을 빈 배열로 설정함으로써 해결하였습니다.</p>
+
+<summary>TypeError: Cannot read property 'map' of undefined</summary>
+<br />
+문제원인 : useState를 사용하여 channelVideo 상태를 초기화할 때 초기값을 설정하지 않아서 발생했습니다.
+
+```javascript
+// 문제코드
+const [channelVideo, setChannelVideo] = useState();
+// 개선코드
+const [channelVideo, setChannelVideo] = useState([]);
+```
+<p>channelVideo는 초기에 빈 배열로 설정되며, 이후에도 배열로 유지됩니다. 따라서 channelVideo에 대해 map 같은 배열 메소드를 사용할 때, undefined 값으로 인한 에러가 발생하지 않게 됩니다.</p>
 </details>
